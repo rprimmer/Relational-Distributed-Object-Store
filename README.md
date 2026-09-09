@@ -59,7 +59,6 @@ rdos/
 ├── Makefile
 ├── .latexmkrc
 ├── .gitignore
-├── ChangeLog
 └── README.md
 ```
 
@@ -88,8 +87,7 @@ Historical drafts, reviewer material, office-document originals, older PDFs,
 and editor recovery files are retained locally in ignored `attic/`.
 The ignored `.refactor-baseline/` contains the pre-refactor source snapshot,
 checksums, original build, and comparison results. Neither directory is required
-for compilation or included in the public repository. The original
-[ChangeLog](ChangeLog) remains part of the source history.
+for compilation or included in the public repository.
 
 ## Refactoring and validation
 
