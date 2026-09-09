@@ -1,0 +1,36 @@
+
+\section{Metadata} \label{s:md}
+In the past the term \emph{\md} was not widely known, understood mainly by technologist, and for good reason---\fss{} provide \md{} in parsimonious form, providing data about a file, such as when it was created and last updated. Object stores by contrast are comparatively lavish in what they allow for \md{}, allowing the user to associate any arbitrary text with a data object.
+
+Today, grandmothers think nothing of storing their photos online in globally available cloud repositories while annotating the pictures with  \md{} key-value pairs such as who is in the photo, where it was taken, and at what event. Young children know how to assign \md{} \emph{tags} to logically group items on Facebook and Twitter. In the 21st century, metadata has moved from the exotic to pedestrian.
+
+\subsection{Value of Metadata}
+Metadata is the connective tissue that binds objects to one another. Additionally \md{} allows users to apply semantic meaning to otherwise opaque data objects, while providing a means to abbreviate large files with a very small amount of data. In short, it is \md{} that allows us to add structure to \ud{}.
+
+How important is \md{}? In modern systems if the original designers fail to provide for it, the users do so themselves. Hashtags are a \md{} convention amongst users of the microblogging service Twitter \cite{Kwak:2010:TSN:1772690.1772751}, yet when it was first released Twitter had no support for \md{}. Instead hashtags were described by a user in 2007 (in a 140-character Twitter post), and became so popular that the engineers at Twitter added software support for it. Today, Twitter detects ``trending topics'' using popular hashtags \cite{Badia:2011:CAR:2070736.2070750}.
+
+\subsubsection{Logical Grouping}
+Absent the ability to create logical groupings, a mass of objects housed in a data store is of limited value. In such a case the data store provides essentially equivalent value as tape---files are persisted, but there's not much you can do with them.
+
+Logical grouping creates tacit relation amongst an otherwise indistinct set of independent objects. Since this is a logical operation, the grouping is elastic and does not require expensive disk operations to move files into specific containers to define groupings.
+
+\subsubsection{Semantic Meaning} \label{s:sm}
+Storing data is one thing, having that same data have genuine meaning to the user is quite another. For example, a photo stored on disk is valuable, but it's the ability to add semantic meaning to these photos (e.g., who is in the photograph at what event) that brings life to the data.
+
+\subsubsection{Index Efficiency}
+Indexing the content of very large files consumes substantial capacity to hold the resulting index. Through \md{} it's possible to provide a comparatively small subset of data, effectively creating an abbreviation of the larger file content. The capacity required to index this \md{} can be orders of magnitude less than that required to index the full set of data objects, with a commensurate reduction in computes required to create the search index.
+
+\begin{comment}
+
+\subsection{Storage Metadata}
+For \ud{}, \md{} is contained in both \fss{} and \oss{}. Object stores are able to build upon the framework provided by \fs{} implementations and augment these to extend and expand the value of \md{} to client \apps{}.
+
+\subsubsection{File System}
+In a \fs{}, \md{} provides information necessary for the operation and integrity of the \fs{} itself. Since the scope of such \md{} is prescribed by and intrinsically tied to a specific \fs{} instance, there's little opportunity for the human user to extend the basic \md{} to encapsulate \md{} of their own choosing. Further, since allowable \md{} entries are spartan, there isn't the ability to allow expressive user-generated \md{}, such as the key-value pairs described in \S\ref{s:sm} for annotating images. Attempts to extend \fsm{} through mechanisms such as \emph{Extended Attributes} \cite{Grunbacher03:2} never gained widespread adoption, in part because such mechanisms are typically only available to a programmer and implementation is limited to specific \fss{}.
+
+Ideally, a \fs{} would allow the user to create any arbitrarily complex \md{} entries and not be bound by typical \fs{} limits. This could be achieved by having a separate and distinct file where such \md{} could be stored. The difficulty is that there isn't a way to cleanly associated this distinct \md{} file with the original user data file.
+
+\subsubsection{Object Stores}
+As depicted in Figure \ref{fig:stack} (p. \pageref{fig:stack}), an \os{} is a software systems that sits on top of a set of \fss{} distributed over multiple nodes. As such it can enable the ideal of tightly coupling a user file (data object) with a separate \md{} file, allowing the user to treat the two as a single entity. As described in \S\ref{s:obj}, within the context of an \os{} an object is the union of a data object and the associated \md{}. Therefore, an \os{} can permit the type of richly expressive user \md{} not otherwise available, without requiring client \apps{} to manage the coupling of data and \md{}. Rather, the \os{} software itself will manage the integrity of this coupling even across multiple object versions.
+
+\end{comment}

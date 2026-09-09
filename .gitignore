@@ -1,0 +1,12 @@
+# Generated output, analogous to object files and executables in a C project.
+/build/
+
+# Local pre-refactor evidence and historical working material.
+/.refactor-baseline/
+/attic/
+
+# Editor and operating-system artifacts.
+*.synctex.gz
+*~
+\#*\#
+.DS_Store
