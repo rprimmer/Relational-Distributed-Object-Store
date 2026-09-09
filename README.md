@@ -34,7 +34,7 @@ a named root document, shared configuration files, numbered sections, and a
 separate build directory.
 
 ```text
-rdos/
+Relational-Distributed-Object-Store/
 ├── rdos.tex
 ├── preamble.tex
 ├── macros.tex
@@ -78,8 +78,8 @@ just as compiled objects and executables would be in a C source repository.
 Rebuild the PDF from source after cloning:
 
 ```sh
-git clone https://github.com/rprimmer/rdos.git
-cd rdos
+git clone https://github.com/rprimmer/Relational-Distributed-Object-Store.git
+cd Relational-Distributed-Object-Store
 make
 ```
 
