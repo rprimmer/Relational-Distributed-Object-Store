@@ -4,6 +4,7 @@
 # Local pre-refactor evidence and historical working material.
 /.refactor-baseline/
 /attic/
+/arch/
 /HR/
 /RDOS-Outline.*
 # Original outline filenames also used this spelling.
