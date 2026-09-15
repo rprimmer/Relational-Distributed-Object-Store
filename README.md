@@ -4,6 +4,14 @@ LaTeX source for the June 2013 paper by Robert Primmer, Scott Nyman, and
 Wayzen Lin. The manuscript describes using metadata to establish and persist
 relationships among objects in a distributed object store.
 
+## Read the paper
+
+[**Read or download the final PDF**](rdos.pdf). No build tools are required.
+
+The top-level PDF is tracked in Git. Running `make` refreshes it from the
+compiled copy in `build/`; commit both source changes and the refreshed PDF.
+Cleanup commands retain the top-level PDF.
+
 ## Build
 
 Install a TeX distribution containing pdfLaTeX, BibTeX, latexmk, and the packages
@@ -11,9 +19,9 @@ used in [preamble.tex](preamble.tex). The bibliography uses `acm.bst`.
 Run commands from the repository root:
 
 ```sh
-make                 # build/rdos.pdf
+make                 # build and refresh rdos.pdf
 make clean           # remove intermediates, retain the PDF
-make distclean       # remove intermediates and the generated PDF
+make distclean       # remove build outputs; retain top-level PDF
 ```
 
 `make clean-all` is an alias for `make distclean`. Directly invoking `latexmk`
@@ -35,6 +43,7 @@ separate build directory.
 
 ```text
 Relational-Distributed-Object-Store/
+├── rdos.pdf                 # final paper, ready to read
 ├── rdos.tex
 ├── preamble.tex
 ├── macros.tex
@@ -73,9 +82,8 @@ includes its six numbered subsections. Figures are used directly from
 ## Source control
 
 The repository tracks LaTeX source, figure assets, bibliography, build
-configuration, and documentation. `build/` is generated output and is ignored,
-just as compiled objects and executables would be in a C source repository.
-Rebuild the PDF from source after cloning:
+configuration, documentation, and the final top-level [rdos.pdf](rdos.pdf).
+Intermediate outputs in `build/` are ignored. To rebuild the paper after cloning:
 
 ```sh
 git clone https://github.com/rprimmer/Relational-Distributed-Object-Store.git

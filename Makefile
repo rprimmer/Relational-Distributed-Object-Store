@@ -7,6 +7,7 @@ all: pdf
 # latexmk discovers dependencies (including figures) and reruns BibTeX as needed.
 pdf:
 	$(LATEXMK) rdos.tex
+	cp build/rdos.pdf rdos.pdf
 
 # Restrict cleanup to generated files in build/; retain the finished PDF.
 clean:
@@ -18,6 +19,6 @@ distclean:
 	$(LATEXMK) -C rdos.tex
 
 help:
-	@echo 'make            Build build/rdos.pdf with pdfLaTeX and BibTeX'
+	@echo 'make            Build and refresh rdos.pdf with pdfLaTeX and BibTeX'
 	@echo 'make clean      Remove build intermediates; keep the PDF'
-	@echo 'make distclean  Remove build intermediates and the generated PDF'
+	@echo 'make distclean  Remove build outputs; keep the top-level PDF'
