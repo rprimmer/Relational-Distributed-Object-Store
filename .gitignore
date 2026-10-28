@@ -3,7 +3,7 @@
 
 # Local pre-refactor evidence and historical working material.
 /.refactor-baseline/
-/attic/
+/_attic/
 /arch/
 /HR/
 /RDOS-Outline.*
